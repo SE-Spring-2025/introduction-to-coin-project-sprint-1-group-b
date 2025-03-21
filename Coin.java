@@ -13,6 +13,27 @@ public class Coin {
     protected String mettalurgy;
 
     public Coin() {
-        
+
+    }
+
+    public Coin(double value) {
+        this.value = value;
+    }
+
+    public Coin(double value, int year){
+        this.value = value;
+        this.manufactureYear = year;
+    }
+
+    public String toString() {
+        String printString = "This is a coin";
+        if (this.value != 0) {
+            printString += String.format(" worth %f cents", this.value);
+        }
+        if (this.manufactureYear != 0) {
+            printString += String.format(" manufactured in %d", this.manufactureYear);
+        }
+        printString += ".";
+        return printString;
     }
 }
