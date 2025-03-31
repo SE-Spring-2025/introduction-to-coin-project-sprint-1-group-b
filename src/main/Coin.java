@@ -1,7 +1,7 @@
 import java.util.Calendar;
 import java.text.DecimalFormat;
 
-public class Coin {
+public abstract class Coin {
     public static final double PENNY_VALUE = 0.01;
     public static final double NICKEL_VALUE = 0.05;
     public static final double DIME_VALUE = 0.10;
@@ -22,10 +22,10 @@ public class Coin {
     private int manufactureYear;
     
     public Coin() {
-	this(0);
+	    this(0);
     }
     public Coin(double value) {
-	this(value, (Calendar.getInstance()).get(Calendar.YEAR));
+	    this(value, (Calendar.getInstance()).get(Calendar.YEAR));
     }
     public Coin(double value, int year) {
 
@@ -81,11 +81,10 @@ public class Coin {
 
 	this.value = value;
 	this.manufactureYear = year;
-
-	frontMotto = "IN GOD WE TRUST";
-	backMotto = "E PLURIBUS UNUM";
-	frontLabel = "LIBERTY";
-	backLabel = "UNITED STATES OF AMERICA";
+    this.frontMotto = "IN GOD WE TRUST";
+    this.backMotto = "E PLURIBUS UNUM";
+    this.frontLabel = "LIBERTY";
+    this.backLabel = "UNITED STATES OF AMERICA";
 	
     }
     private boolean cmpDoubles(double a, double b) {
