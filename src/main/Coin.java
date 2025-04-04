@@ -19,6 +19,7 @@ public abstract class Coin {
     private String valueDescription;
     private boolean ridgedEdge;
     private String metallurgy;
+	private Metallurgy smelter;
     private int manufactureYear;
     
     public Coin() {
