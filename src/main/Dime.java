@@ -7,6 +7,19 @@ public class Dime extends Coin {
     }
     
     public Dime(int year) {
-        super(DIME_VALUE, year);
+        super(
+            "Dime", 
+            DIME_VALUE, 
+            "IN GOD WE TRUST", 
+            "E PLURIBUS UNUM", 
+            "LIBERTY", 
+            "UNITED STATES OF AMERICA", 
+            "F_Roosevelt", 
+            "Torch_Branches", 
+            "ONE DIME", 
+            true, 
+            new CuproNickel(), 
+            year
+        );
     }
 }

@@ -7,6 +7,19 @@ public class HalfDollar extends Coin {
     }
     
     public HalfDollar(int year) {
-        super(HALFDOLLAR_VALUE, year);
+        super(
+            "HalfDollar", 
+            DIME_VALUE, 
+            "IN GOD WE TRUST", 
+            "E PLURIBUS UNUM", 
+            "LIBERTY", 
+            "UNITED STATES OF AMERICA", 
+            "J_Kennedy", 
+            "Presidential_Seal", 
+            "HALF DOLLAR", 
+            true, 
+            new CuproNickel(), 
+            year
+        );
     }
 }

@@ -7,6 +7,19 @@ public class Dollar extends Coin {
     }
     
     public Dollar(int year) {
-        super(DOLLAR_VALUE, year);
+        super(
+            "Dollar", 
+            DIME_VALUE, 
+            "IN GOD WE TRUST", 
+            "E PLURIBUS UNUM", 
+            "LIBERTY", 
+            "UNITED STATES OF AMERICA", 
+            "S_Anthony", 
+            "Moon_Eagle", 
+            "ONE DOLLAR", 
+            true, 
+            new CuproNickel(), 
+            year
+        );
     }
 }
