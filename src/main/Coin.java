@@ -48,6 +48,12 @@ public abstract class Coin {
 		this.ridgedEdge = ridgedEdge;
 		this.smelter = smelter;
 		this.manufactureYear = manufactureYear;
+		smelt();
+    }
+
+	public void smelt() 
+	{
+        this.metallurgy = smelter.smelt();
     }
 	
     public String getFamiliarName() {
