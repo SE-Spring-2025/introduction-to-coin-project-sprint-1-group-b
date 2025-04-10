@@ -9,7 +9,7 @@ public class Dollar extends Coin {
     public Dollar(int year) {
         super(
             "Dollar", 
-            DIME_VALUE, 
+            DOLLAR_VALUE, 
             "IN GOD WE TRUST", 
             "E PLURIBUS UNUM", 
             "LIBERTY", 

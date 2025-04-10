@@ -9,7 +9,7 @@ public class Quarter extends Coin {
     public Quarter(int year) {
         super(
             "Quarter", 
-            DIME_VALUE, 
+            QUARTER_VALUE, 
             "IN GOD WE TRUST", 
             "E PLURIBUS UNUM", 
             "LIBERTY", 
