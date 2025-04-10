@@ -175,9 +175,3 @@ public class CoinTest {
         return true;
     }
 }
-   
-class MockCoin extends Coin {
-    public MockCoin() {
-        super();
-    }
-}

@@ -9,7 +9,7 @@ public class HalfDollar extends Coin {
     public HalfDollar(int year) {
         super(
             "HalfDollar", 
-            DIME_VALUE, 
+            HALFDOLLAR_VALUE, 
             "IN GOD WE TRUST", 
             "E PLURIBUS UNUM", 
             "LIBERTY", 
