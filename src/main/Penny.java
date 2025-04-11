@@ -7,7 +7,20 @@ public class Penny extends Coin {
     }
     
     public Penny(int year) {
-        super(PENNY_VALUE, year);
+        super(
+            "Penny", 
+            PENNY_VALUE, 
+            "IN GOD WE TRUST", 
+            "E PLURIBUS UNUM", 
+            "LIBERTY", 
+            "UNITED STATES OF AMERICA", 
+            "A_Lincoln", 
+            "Lincoln_Memorial", 
+            "ONE CENT", 
+            false, 
+            new Copper(), 
+            year
+        );
     }
 }
 

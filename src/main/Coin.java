@@ -19,76 +19,41 @@ public abstract class Coin {
     private String valueDescription;
     private boolean ridgedEdge;
     private String metallurgy;
+	private Metallurgy smelter;
     private int manufactureYear;
     
-    public Coin() {
-	    this(0);
+    public Coin(
+		String familiarName, 
+		double value, 
+		String frontMotto, 
+		String backMotto, 
+		String frontLabel, 
+		String backLabel, 
+		String frontImage, 
+		String backImage, 
+		String valueDescription, 
+		boolean ridgedEdge,
+		Metallurgy smelter, 
+		int manufactureYear
+	) {
+		this.familiarName = familiarName;
+		this.value = value;
+		this.frontMotto = frontMotto;
+		this.backMotto = backMotto;
+		this.frontLabel = frontLabel;
+		this.backLabel = backLabel;
+		this.frontImage = frontImage;
+		this.backImage = backImage;
+		this.valueDescription = valueDescription;
+		this.ridgedEdge = ridgedEdge;
+		this.smelter = smelter;
+		this.manufactureYear = manufactureYear;
+		smelt();
     }
-    public Coin(double value) {
-	    this(value, (Calendar.getInstance()).get(Calendar.YEAR));
-    }
-    public Coin(double value, int year) {
 
-	if (cmpDoubles(value, PENNY_VALUE)) {
-	    familiarName = "Penny";
-	    frontImage = "A_Lincoln";
-	    backImage = "Lincoln_Memorial";
-	    valueDescription = "ONE CENT";
-	    ridgedEdge = false;
-	    metallurgy = "Copper";
-	}
-	else if (cmpDoubles(value, NICKEL_VALUE)) {
-	    familiarName = "Nickel";
-	    frontImage = "T_Jefferson";
-	    backImage = "Jefferson_Memorial";
-	    valueDescription = "FIVE CENTS";
-	    ridgedEdge = false;
-	    metallurgy = "Cupro-Nickel";
-	}
-	else if (cmpDoubles(value, DIME_VALUE)) {
-	    familiarName = "Dime";
-	    frontImage = "F_Roosevelt";
-	    backImage = "Torch_Branches";
-	    valueDescription = "ONE DIME";
-	    ridgedEdge = true;
-	    metallurgy = "Cupro-Nickel";
-	}
-	else if (cmpDoubles(value, QUARTER_VALUE)) {
-	    familiarName = "Quarter";
-	    frontImage = "G_Washington";
-	    backImage = "Eagle";
-	    valueDescription = "QUARTER DOLLAR";
-	    ridgedEdge = true;
-	    metallurgy = "Cupro-Nickel";
-	}
-	else if (cmpDoubles(value, HALFDOLLAR_VALUE)) {
-	    familiarName = "HalfDollar";
-	    frontImage = "J_Kennedy";
-	    backImage = "Presidential_Seal";
-	    valueDescription = "HALF DOLLAR";
-	    ridgedEdge = true;
-	    metallurgy = "Cupro-Nickel";
-	}
-	else if (cmpDoubles(value, DOLLAR_VALUE)) {
-	    familiarName = "Dollar";
-	    frontImage = "S_Anthony";
-	    backImage = "Moon_Eagle";
-	    valueDescription = "ONE DOLLAR";
-	    ridgedEdge = true;
-	    metallurgy = "Cupro-Nickel";
-	}
-	else value = 0;
-
-	this.value = value;
-	this.manufactureYear = year;
-    this.frontMotto = "IN GOD WE TRUST";
-    this.backMotto = "E PLURIBUS UNUM";
-    this.frontLabel = "LIBERTY";
-    this.backLabel = "UNITED STATES OF AMERICA";
-	
-    }
-    private boolean cmpDoubles(double a, double b) {
-	return Math.abs(a-b) < 0.00001;
+	public void smelt() 
+	{
+        this.metallurgy = smelter.smelt();
     }
 	
     public String getFamiliarName() {
