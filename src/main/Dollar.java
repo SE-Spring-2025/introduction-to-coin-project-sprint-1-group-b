@@ -21,5 +21,8 @@ public class Dollar extends Coin {
             new CuproNickel(), 
             year
         );
+        Coin.coinCounter.incrementTotalCoins();
+        Coin.coinCounter.incrementDollar();
+        TotalCoins.update();
     }
 }

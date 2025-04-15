@@ -21,5 +21,8 @@ public class HalfDollar extends Coin {
             new CuproNickel(), 
             year
         );
+        Coin.coinCounter.incrementTotalCoins();
+        Coin.coinCounter.incrementHalfDollar();
+        TotalCoins.update();
     }
 }
