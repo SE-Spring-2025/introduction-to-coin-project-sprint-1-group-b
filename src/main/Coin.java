@@ -8,19 +8,19 @@ public abstract class Coin {
 	public static final double QUARTER_VALUE = 0.25;
 	public static final double HALFDOLLAR_VALUE = 0.50;
 	public static final double DOLLAR_VALUE = 1.00;
-	private String familiarName;
-	private double value;
-	private String frontMotto;
-	private String backMotto;
-	private String frontLabel;
-	private String backLabel;
-	private String frontImage;
-	private String backImage;
-	private String valueDescription;
-	private boolean ridgedEdge;
-	private String metallurgy;
-	private Metallurgy smelter;
-	private int manufactureYear;
+	protected String familiarName;
+	protected double value;
+	protected String frontMotto;
+	protected String backMotto;
+	protected String frontLabel;
+	protected String backLabel;
+	protected String frontImage;
+	protected String backImage;
+	protected String valueDescription;
+	protected boolean ridgedEdge;
+	protected String metallurgy;
+	protected Metallurgy smelter;
+	protected int manufactureYear;
 	protected static CoinCounter coinCounter = new CoinCounter();
 
 	public Coin(
@@ -50,6 +50,11 @@ public abstract class Coin {
 		this.smelter = smelter;
 		this.manufactureYear = manufactureYear;
 		smelt();
+	}
+
+	public Coin manufacture(Coin c0)
+	{
+
 	}
 
 	public void smelt() {

@@ -27,3 +27,24 @@ public class Penny extends Coin {
     }
 }
 
+protected Coin imprintFront(Coin c)
+{
+    c.frontMotto = "IN GOD WE TRUST";
+    c.frontLabel = "LIBERTY";
+    c.frontImage = "A_Lincoln";
+    return c;
+}
+
+protected Coin imprintBack(Coin c)
+{
+    c.backMotto = "IN GOD WE TRUST";
+    c.backLabel = "UNITED STATES OF AMERICA";
+    c.backImage = "Lincoln_Memorial";
+    return c;
+}
+
+protected Coin edge(Coin c)
+{
+    c.ridgedEdge = false;
+    return c;
+}
