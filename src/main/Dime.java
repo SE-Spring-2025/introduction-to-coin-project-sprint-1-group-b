@@ -21,5 +21,8 @@ public class Dime extends Coin {
             new CuproNickel(), 
             year
         );
+        Coin.coinCounter.incrementTotalCoins();
+        Coin.coinCounter.incrementDime();
+        TotalCoins.update();
     }
 }

@@ -21,5 +21,8 @@ public class Quarter extends Coin {
             new CuproNickel(), 
             year
         );
+        Coin.coinCounter.incrementTotalCoins();
+        Coin.coinCounter.incrementQuarter();
+        TotalCoins.update();
     }
 }

@@ -21,6 +21,9 @@ public class Penny extends Coin {
             new Copper(), 
             year
         );
+        Coin.coinCounter.incrementTotalCoins();
+        Coin.coinCounter.incrementPenny();
+        TotalCoins.update();
     }
 }
 

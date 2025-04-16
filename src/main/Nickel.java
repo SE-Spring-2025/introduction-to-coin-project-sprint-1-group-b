@@ -21,5 +21,8 @@ public class Nickel extends Coin {
             new CuproNickel(), 
             year
         );
+        Coin.coinCounter.incrementTotalCoins();
+        Coin.coinCounter.incrementNickel();
+        TotalCoins.update();
     }
 }

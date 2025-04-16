@@ -4,6 +4,8 @@
 
 Currently supports every coin in US circulation. The demo allows for the client to interact with the features we have written.
 
+Also has a GUI interface that shows the counts for total quarters and overall coin totals.
+
 ### Setup
 
 Clone the repository, and then run make compile from the terminal. Then you can run the tests, checkstyle, demo, etc.

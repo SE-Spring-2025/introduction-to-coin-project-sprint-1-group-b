@@ -5,6 +5,8 @@ public class Demo {
 	private static Scanner keyboard = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
+		TotalCoins gui = new TotalCoins();
 		System.out.println();
 		System.out.println();
 		System.out.println("Welcome to the CoinFlips Demo!");
