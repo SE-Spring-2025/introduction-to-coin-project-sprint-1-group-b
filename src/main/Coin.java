@@ -22,6 +22,19 @@ public abstract class Coin {
 	protected Metallurgy smelter;
 	protected int manufactureYear;
 	protected static CoinCounter coinCounter = new CoinCounter();
+	protected boolean flipped;
+	protected boolean buffed;
+
+	public Coin (String familiarName, double value, Metallurgy smelter) {
+		this.familiarName = familiarName;
+		this.value = value;
+		this.smelter = smelter;
+
+		this.flipped = false;
+		this.buffed = false;
+
+		this.smelt();
+	}
 
 	public Coin(
 		String familiarName,
@@ -52,9 +65,8 @@ public abstract class Coin {
 		smelt();
 	}
 
-	public Coin manufacture(Coin c0)
-	{
-
+	public Coin manufacture(Coin c0) {
+		return c0;
 	}
 
 	public void smelt() {

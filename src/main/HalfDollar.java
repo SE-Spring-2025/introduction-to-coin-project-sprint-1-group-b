@@ -1,38 +1,14 @@
-import java.util.Calendar;
-
 public class HalfDollar extends Coin {
-
     public HalfDollar() {
-        this(Calendar.getInstance().get(Calendar.YEAR));
-    }
-
-    public HalfDollar(int year) {
         super(
-<<<<<<< HEAD
-            "HalfDollar", 
-            HALFDOLLAR_VALUE, 
-            "IN GOD WE TRUST", 
-            "E PLURIBUS UNUM", 
-            "LIBERTY", 
-            "UNITED STATES OF AMERICA", 
-            "J_Kennedy", 
-            "Presidential_Seal", 
-            "HALF DOLLAR", 
-            true, 
-            new CuproNickel(), 
-            year
-=======
                 "HalfDollar",
                 HALFDOLLAR_VALUE,
                 new CuproNickel()
->>>>>>> 552fbe2 (formatting changes)
         );
         Coin.coinCounter.incrementTotalCoins();
         Coin.coinCounter.incrementHalfDollar();
         TotalCoins.update();
     }
-<<<<<<< HEAD
-=======
 
     protected Coin imprintFront(Coin c) {
         c.frontMotto = "IN GOD WE TRUST";
@@ -56,5 +32,4 @@ public class HalfDollar extends Coin {
         c.ridgedEdge = true;
         return c;
     }
->>>>>>> 552fbe2 (formatting changes)
 }
