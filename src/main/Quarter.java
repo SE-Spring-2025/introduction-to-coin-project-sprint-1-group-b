@@ -1,9 +1,16 @@
+import java.util.Calendar;
+
 public class Quarter extends Coin {
+    public Quarter() {
+        this(Calendar.getInstance().get(Calendar.YEAR));
+    }
+
     public Quarter(int year) {
         super(
             "Quarter", 
             QUARTER_VALUE, 
-            new CuproNickel()
+            new CuproNickel(),
+            year
         );
 
         Coin.coinCounter.incrementTotalCoins();
@@ -11,6 +18,7 @@ public class Quarter extends Coin {
         TotalCoins.update();
     }
 
+    @Override
     protected Coin imprintFront(Coin c) {
         c.frontMotto = "IN GOD WE TRUST";
         c.frontLabel = "LIBERTY";
@@ -18,6 +26,7 @@ public class Quarter extends Coin {
         return c;
     }
 
+    @Override
     protected Coin imprintBack(Coin c) {
         c.backMotto = "IN GOD WE TRUST";
         c.backLabel = "UNITED STATES OF AMERICA";
@@ -25,7 +34,8 @@ public class Quarter extends Coin {
         c.valueDescription = "QUARTER DOLLAR";
         return c;
     }
-
+    
+    @Override
     protected Coin edge(Coin c) {
         c.ridgedEdge = false;
         return c;

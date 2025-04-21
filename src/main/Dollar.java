@@ -1,15 +1,24 @@
+import java.util.Calendar;
+
 public class Dollar extends Coin {
     public Dollar() {
+        this(Calendar.getInstance().get(Calendar.YEAR));
+    }
+
+    public Dollar(int year) {
         super(
-                "Dollar",
-                DOLLAR_VALUE,
-                new CuproNickel()
+            "Dollar",
+            DOLLAR_VALUE,
+            new CuproNickel(),
+            year
         );
+
         Coin.coinCounter.incrementTotalCoins();
         Coin.coinCounter.incrementDollar();
         TotalCoins.update();
     }
 
+    @Override
     protected Coin imprintFront(Coin c) {
         c.frontMotto = "IN GOD WE TRUST";
         c.frontLabel = "LIBERTY";
@@ -17,6 +26,7 @@ public class Dollar extends Coin {
         return c;
     }
 
+    @Override
     protected Coin imprintBack(Coin c) {
         if (!c.flipped) {
             return c;
@@ -28,6 +38,7 @@ public class Dollar extends Coin {
         return c;
     }
 
+    @Override
     protected Coin edge(Coin c) {
         c.ridgedEdge = true;
         return c;
