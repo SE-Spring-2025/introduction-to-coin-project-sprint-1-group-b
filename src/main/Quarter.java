@@ -14,7 +14,7 @@ public class Quarter extends Coin {
         );
 
         Coin.coinCounter.incrementTotalCoins();
-        Coin.coinCounter.incrementPenny();
+        Coin.coinCounter.incrementQuarter();
         TotalCoins.update();
     }
 
