@@ -2,11 +2,12 @@
 import java.util.Scanner;
 
 public class Demo {
+	private static TotalCoins gui = new TotalCoins();
 	private static Scanner keyboard = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		
-		TotalCoins gui = new TotalCoins();
+		
 		System.out.println();
 		System.out.println();
 		System.out.println("Welcome to the CoinFlips Demo!");
@@ -107,6 +108,7 @@ public class Demo {
 					System.out.println("Invalid entry, try again.");
 					break;
 			}
+			gui.update();
 		}
 	}
 }

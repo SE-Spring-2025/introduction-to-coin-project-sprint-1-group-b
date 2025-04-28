@@ -32,6 +32,7 @@ public abstract class Coin {
 
 		this.flipped = false;
 		this.buffed = false;
+
 	}
 
 	/* public Coin(
